@@ -2,37 +2,64 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie-card {
+  height: 170px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.card {
+  border: none !important;
+}
+
+.movie-card-body {
+  padding: 5px !important;
+}
+
+.carousel-image {
+  z-index: 1;
+  width: 55%;
+  max-height: 100%;
+}
+
+.featured-description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.featured-title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+@media (max-width: 768px) {
+  .movie-card {
+    height: 120px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .card-body {
+    padding: 5px !important;
   }
-  to {
-    transform: rotate(360deg);
+
+  .movie-card-title {
+    font-size: 1rem !important;
+  }
+
+  .movie-card-text {
+    font-size: 0.9rem !important;
+  }
+
+  .featured-card {
+    padding: 5px;
+  }
+
+  .featured-card-img {
+    height: 180px;
+  }
+
+  .carousel-image {
+    width: 100%;
   }
 }
