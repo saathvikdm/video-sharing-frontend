@@ -7,7 +7,7 @@ import MovieBrowser from '../components/MovieBrowser';
 export default function Home() {
   return (
     <>
-      <Hero />
+      {/* <Hero /> */}
       <FeaturedMovieCard />
       <MovieBrowser />
       <About />

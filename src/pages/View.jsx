@@ -8,7 +8,7 @@ export default function View() {
 
   const [movie, setMovie] = useState({});
 
-  const defaultUrlPath = 'http://192.168.1.6:1337' || 'http://localhost:1337';
+  const defaultUrlPath = 'http://localhost:1337';
 
   useEffect(() => {
     fetch(`${defaultUrlPath}/videos/${id}`)
@@ -27,13 +27,12 @@ export default function View() {
       <div className="d-flex justify-content-center align-items-start">
         <div className="bg-dark w-100 text-light">
           <div className="container">
-            <Row className="align-items-start justify-content-center pb-5">
-              <Col xs={12} md={6} style={{ maxHeight: '480px' }}>
+            <Row className="align-items-start justify-content-center py-5">
+              <Col xs={12} md={6} className="align-items-center">
                 {movie && movie.Video && (
                   <video
                     controls
                     src={`${defaultUrlPath}${movie.Video.url}`}
-                    height="480px"
                     width="640px"
                     style={{ maxWidth: '90vw' }}
                     controlsList="nodownload"

@@ -4,7 +4,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 export default function NavbarComponent() {
   return (
-    <Navbar collapseOnSelect expand="lg" sticky="top" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" sticky="top" bg="light" variant="light">
       <Container className="py-2">
         <Navbar.Brand href="/">Language Documentaries</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -24,7 +24,7 @@ export default function NavbarComponent() {
               className="ms-3 me-2"
               aria-label="Search"
             />
-            <Button variant="outline-primary">Search</Button>
+            <Button variant="outline-secondary">Search</Button>
           </Form>
         </Navbar.Collapse>
       </Container>

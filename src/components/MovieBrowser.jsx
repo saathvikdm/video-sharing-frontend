@@ -4,7 +4,7 @@ import MovieCard from './MovieCard';
 export default function MovieBrowser() {
   const [movies, setMovies] = useState([]);
 
-  const defaultUrlPath = 'http://192.168.1.6:1337' || 'http://localhost:1337';
+  const defaultUrlPath = 'http://localhost:1337';
 
   useEffect(() => {
     fetch(`${defaultUrlPath}/videos`)
@@ -19,9 +19,9 @@ export default function MovieBrowser() {
   }, [movies]);
 
   return (
-    <section className="bg-light py-5">
+    <section className="bg-light py-5 text-dark">
       <div className="container">
-        <h1 className="text-dark mb-4 text-align-center">All Documentaries</h1>
+        <h1 className="text-dark mb-4 text-align-center">Our Videos</h1>
         <div className="row justify-content-center justify-content-md-start align-items-start my-3 g-3">
           {movies && movies.map((movie) => <MovieCard data={movie} />)}
         </div>
