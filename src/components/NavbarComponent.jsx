@@ -4,9 +4,9 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 export default function NavbarComponent() {
   return (
-    <Navbar collapseOnSelect expand="lg" sticky="top" bg="light" variant="light">
+    <Navbar collapseOnSelect expand="lg" sticky="top" bg="black" variant="dark">
       <Container className="py-2">
-        <Navbar.Brand href="/">Language Documentaries</Navbar.Brand>
+        <Navbar.Brand href="/">BashaMandakini</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">

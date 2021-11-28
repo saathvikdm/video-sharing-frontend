@@ -2,16 +2,39 @@
   text-align: center;
 }
 
+.select-disabled {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.text-featured-title {
+  color: #f69b00;
+}
+
 .movie-card {
   height: 170px;
+  transition: all 0.5s ease-in-out;
 }
 
 .card {
   border: none !important;
-}
-
-.movie-card-body {
-  padding: 5px !important;
+  overflow: hidden;
 }
 
 .carousel-image {
@@ -49,6 +72,96 @@
   top: 25%;
 }
 
+.featured-thumbnail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.featured-thumbnail-play {
+  position: absolute;
+  z-index: 99;
+}
+
+.inner_circle {
+  fill: #0b5ed7;
+}
+
+.play {
+  fill: white;
+}
+
+.outer_circle {
+  stroke-width: 3;
+  stroke-dasharray: 410;
+  stroke-dashoffset: 0;
+  stroke-linecap: square;
+  transition: all 0.4s ease-out;
+}
+
+.featured-thumbnail {
+  transition: all 0.5s ease-in-out;
+}
+
+.featured-thumbnail-overlay::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-out;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+}
+
+.featured-thumbnail-container:hover .movie-card {
+  z-index: 1;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  transition: all 0.5s ease-in-out;
+}
+
+.featured-thumbnail-container:hover .featured-thumbnail {
+  z-index: 1;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  transition: all 0.5s ease-in-out;
+}
+
+.featured-thumbnail-container:hover .outer_circle {
+  stroke-dashoffset: 410;
+  transition: stroke 0.3s 0.4s ease-out, stroke-dashoffset 0.2s ease-out;
+}
+
+.featured-thumbnail-container:hover .inner_circle {
+  fill: #bf2428;
+  transition: fill 0.1s 0.1s ease-out;
+}
+
+.featured-thumbnail-container:hover .play {
+  fill: white;
+  transition: fill 0.4s 0.3s ease-out;
+}
+
+.featured-thumbnail-container:hover .featured-thumbnail-overlay::after {
+  z-index: 2;
+  opacity: 1;
+  transition: all 0.3s ease-in;
+}
+
+.section-title::after {
+  margin-top: 8px;
+  content: '';
+  width: 41px;
+  height: 4px;
+  background-image: linear-gradient(264deg, #f69b00, #ed6a00);
+  display: block;
+  border-radius: 2px;
+}
+
 @media (max-width: 768px) {
   .movie-card {
     height: 120px;
@@ -82,7 +195,17 @@
     top: 1%;
   }
 
+  .featured-description {
+    -webkit-line-clamp: 2;
+  }
+}
+
+@media (max-width: 992px) {
   .featured-row {
     flex-direction: column-reverse;
+  }
+
+  .featured-title {
+    font-size: 1.3em !important;
   }
 }

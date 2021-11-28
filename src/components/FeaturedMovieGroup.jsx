@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Carousel, Col, Ratio, Row } from 'react-bootstrap';
+import { Button, Carousel, Col, Ratio, Row, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 
+import Animate from 'animate.css-react';
+
 import Feat from '../feat.png';
-import Thumb from '../thumbnail.jpg';
+import Thumb from '../thumbnail5.jpg';
+import AnimatedPlay from './AnimatedPlay';
+import Loader from './Loader';
 
 export default function FeaturedMovieCard() {
   const [featured, setFeatured] = useState();
@@ -115,40 +119,77 @@ export default function FeaturedMovieCard() {
   //   </section>
 
   return (
-    <section className="bg-black text-dark" id="featured">
+    <section className="bg-black text-dark select-disabled" id="featured">
       <div className="container-fluid">
         <div className="row align-items-center justify-content-center">
-          <Carousel>
-            <Carousel.Item>
-              <div className="featured-overlay">
-                <Ratio aspectRatio={ratio > 1000 ? '21x9' : '1x1'}>
-                  <img className="d-block w-100" src={Thumb} alt="First slide" />
-                </Ratio>
-              </div>
-              <Carousel.Caption className="carousel-caption">
-                <Row className="d-flex align-items-center featured-row">
-                  <Col lg={6} className="text-start mt-3 mt-md-0">
-                    <h1>First slide label</h1>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    <Button variant="primary">
-                      {' '}
-                      <Link
-                        // to={`/view/${data.id}`}
-                        style={{ textDecoration: 'none', color: 'inherit' }}
-                      >
-                        <FontAwesomeIcon icon={faPlay} /> &ensp;Watch Video
-                      </Link>{' '}
-                    </Button>
-                  </Col>
-                  <Col lg={6}>
-                    <Ratio aspectRatio="16x9">
-                      <img className="d-block w-100" src={Thumb} alt="First slide" height="350px" />
-                    </Ratio>
-                  </Col>
-                </Row>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel>
+          {featured ? (
+            <Carousel>
+              {featured.map((item) => {
+                return (
+                  <Carousel.Item>
+                    <div className="featured-overlay">
+                      <Ratio aspectRatio={ratio > 1000 ? '21x9' : '1x1'}>
+                        <img
+                          className="d-block w-100"
+                          src={`${defaultUrlPath}${item.Thumbnail.url}`}
+                          alt="First slide"
+                        />
+                      </Ratio>
+                    </div>
+                    <Carousel.Caption className="carousel-caption">
+                      <Row className="d-flex align-items-center featured-row">
+                        <Col lg={6} className="text-start mt-3 mt-lg-0 mb-md-3 mb-lg-0">
+                          <h1 className="text-featured-title featured-title animate__animated animate__fadeInRight animate__fast">
+                            {item.Title}
+                          </h1>
+                          <div className="featured-meta animate__animated animate__fadeInRight">
+                            <p className="text-info mb-1">
+                              1hr 05mins <span className="text-light">&bull;</span> Tamil
+                            </p>
+                            <p className="featured-description">{item.Description}</p>
+                          </div>
+                          <Button
+                            variant="primary"
+                            className="animate__animated animate__fadeInRight animate__slow"
+                          >
+                            {' '}
+                            <Link
+                              to={`/view/${item.id}`}
+                              style={{ textDecoration: 'none', color: 'inherit' }}
+                            >
+                              <FontAwesomeIcon icon={faPlay} /> &ensp;Watch Video
+                            </Link>{' '}
+                          </Button>
+                        </Col>
+                        <Col lg={6}>
+                          <div className="featured-thumbnail-container  animate__animated animate__fadeInLeft animate__delay-1s">
+                            <div className="featured-thumbnail-play">
+                              <Link
+                                to={`/view/${item.id}`}
+                                style={{ textDecoration: 'none', color: 'inherit' }}
+                              >
+                                <AnimatedPlay />
+                              </Link>
+                            </div>
+                            <Ratio aspectRatio="16x9" className="featured-thumbnail-overlay">
+                              <img
+                                className="d-block w-100 featured-thumbnail"
+                                src={`${defaultUrlPath}${item.Thumbnail.url}`}
+                                alt="First slide"
+                                height="350px"
+                              />
+                            </Ratio>
+                          </div>
+                        </Col>
+                      </Row>
+                    </Carousel.Caption>
+                  </Carousel.Item>
+                );
+              })}
+            </Carousel>
+          ) : (
+            <Loader content="featured" />
+          )}
         </div>
       </div>
     </section>

@@ -1,4 +1,9 @@
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import Loader from './Loader';
 import MovieCard from './MovieCard';
 
 export default function MovieBrowser() {
@@ -11,7 +16,8 @@ export default function MovieBrowser() {
       .then((res) => res.json())
       .then((res) => {
         setMovies(res);
-      });
+      })
+      .catch((err) => console.log(err));
   }, []);
 
   useEffect(() => {
@@ -21,9 +27,25 @@ export default function MovieBrowser() {
   return (
     <section className="bg-light py-5 text-dark">
       <div className="container">
-        <h1 className="text-dark mb-4 text-align-center">Our Videos</h1>
+        <div className="d-flex justify-content-between mx-2">
+          <h1 className="section-title text-start text-dark">Our Videos</h1>
+          <div className="mt-2">
+            <Button variant="outline-dark">
+              <Link
+                // to={`/view/${item.id}`}
+                style={{ textDecoration: 'none', color: 'inherit' }}
+              >
+                <FontAwesomeIcon icon={faPlay} /> &ensp;More Videos
+              </Link>
+            </Button>
+          </div>
+        </div>
         <div className="row justify-content-center justify-content-md-start align-items-start my-3 g-3">
-          {movies && movies.map((movie) => <MovieCard data={movie} />)}
+          {movies && movies.length !== 0 ? (
+            movies.map((movie) => <MovieCard data={movie} />)
+          ) : (
+            <Loader content="movies" color="dark" />
+          )}
         </div>
       </div>
     </section>
