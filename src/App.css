@@ -43,6 +43,11 @@
   height: 500px;
 }
 
+.carousel-full-width {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 .featured-description {
   overflow: hidden;
   display: -webkit-box;
@@ -162,6 +167,10 @@
   border-radius: 2px;
 }
 
+.moviePlayer {
+  height: 500px;
+}
+
 @media (max-width: 768px) {
   .movie-card {
     height: 120px;
@@ -207,5 +216,9 @@
 
   .featured-title {
     font-size: 1.3em !important;
+  }
+
+  .movie-card-text {
+    font-size: 0.8em !important;
   }
 }

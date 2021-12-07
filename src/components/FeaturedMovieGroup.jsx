@@ -123,7 +123,7 @@ export default function FeaturedMovieCard() {
       <div className="container-fluid">
         <div className="row align-items-center justify-content-center">
           {featured ? (
-            <Carousel>
+            <Carousel className="carousel-full-width">
               {featured.map((item) => {
                 return (
                   <Carousel.Item>

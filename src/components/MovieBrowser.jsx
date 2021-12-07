@@ -29,7 +29,7 @@ export default function MovieBrowser() {
       <div className="container">
         <div className="d-flex justify-content-between mx-2">
           <h1 className="section-title text-start text-dark">Our Videos</h1>
-          <div className="mt-2">
+          <div className="mt-1">
             <Button variant="outline-dark">
               <Link
                 // to={`/view/${item.id}`}

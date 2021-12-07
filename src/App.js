@@ -10,6 +10,7 @@ import NavbarComponent from './components/NavbarComponent';
 import Home from './pages/Home';
 import View from './pages/View';
 import ScrollToTop from './utils/ScrollToTop';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route exact path="/" component={Home} />
           </Switch>
         </ScrollToTop>
+        <Footer />
       </Router>
     </div>
   );

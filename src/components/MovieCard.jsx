@@ -79,37 +79,16 @@ export default function MovieCard({ data }) {
                 overflow: 'hidden',
                 whiteSpace: 'nowrap',
               }}
+              className="mb-1"
             >
               {data.Title}
             </Card.Title>
             <Card.Text>
-              {data &&
-                data.categories &&
-                data.categories.map((category) => {
-                  return (
-                    <Badge pill bg="dark" className="me-1">
-                      {category.name}
-                    </Badge>
-                  );
-                })}
+              <p className="text-secondary mb-0 movie-card-text">
+                1hr 05mins <span className="text-dark">&bull;</span> Tamil{' '}
+                <span className="text-dark">&bull;</span> Sept 10, 2021
+              </p>
             </Card.Text>
-            <Card.Text
-              style={{
-                display: 'block',
-                textOverflow: 'ellipsis',
-                width: 'inherit',
-                overflow: 'hidden',
-                whiteSpace: 'nowrap',
-              }}
-            >
-              {data.Description}
-            </Card.Text>
-            <Button variant="primary">
-              {' '}
-              <Link to={`/view/${data.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                <FontAwesomeIcon icon={faPlay} /> &ensp;Watch Video
-              </Link>{' '}
-            </Button>
           </Card.Body>
         </Card>
       </div>

@@ -2,13 +2,13 @@ import React from 'react';
 
 export default function About() {
   return (
-    <section className="bg-dark text-light">
+    <section className="text-light" style={{ backgroundColor: '#000b36' }}>
       <div className="container py-5">
-        <div className="row align-items-center justify-content-center">
-          <div className="text-md-start">
-            <h1 className="text-warning mb-4">About Language Documentaries</h1>
+        <div className="row align-items-center justify-content-center mx-1">
+          <div className="text-start">
+            <h1 className="section-title text-featured-title mb-4">About BashaMandakini</h1>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+              BashaMandakini is simply text of the printing and typesetting industry. Lorem Ipsum
               has been the industry's standard dummy text ever since the 1500s, when an unknown
               printer took a galley of type and scrambled it to make a type specimen book. It has
               survived not only five centuries, but also the leap into electronic typesetting,

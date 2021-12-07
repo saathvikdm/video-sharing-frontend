@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Col, Row, Badge } from 'react-bootstrap';
+import { Col, Row, Badge, Ratio } from 'react-bootstrap';
 import { useParams } from 'react-router';
+import Loader from '../components/Loader';
 import MovieBrowser from '../components/MovieBrowser';
+import VideoPlayer from 'react-video-js-player';
 
-export default function View() {
+export default function View(props) {
   const { id } = useParams();
 
   const [movie, setMovie] = useState({});
@@ -23,27 +25,38 @@ export default function View() {
   }, [movie]);
 
   return movie ? (
-    <section style={{ height: '100vh' }}>
+    <section>
       <div className="d-flex justify-content-center align-items-start">
-        <div className="bg-dark w-100 text-light">
-          <div className="container">
-            <Row className="align-items-start justify-content-center py-5">
-              <Col xs={12} md={6} className="align-items-center">
-                {movie && movie.Video && (
-                  <video
-                    controls
-                    src={`${defaultUrlPath}${movie.Video.url}`}
-                    width="640px"
-                    style={{ maxWidth: '90vw' }}
-                    controlsList="nodownload"
+        <div className="bg-light w-100 text-dark">
+          <div className="movieContainer">
+            <div className="bg-black moviePlayer">
+              <div className="h-50 d-flex justify-content-center">
+                {movie && movie.Video ? (
+                  // <video
+                  //   autoPlay
+                  //   controls
+                  //   playsInline
+                  //   // src={`${defaultUrlPath}${movie.Video.url}`}
+                  //   src="http://localhost:1337/uploads/output/output.m3u8"
+                  //   controlsList="nodownload"
+                  //   className="moviePlayer"
+                  //   style={{ maxWidth: '100%' }}
+                  // />
+                  <VideoPlayer
+                    controls={true}
+                    src="http://localhost:1337/uploads/output/output.m3u8"
+                    height="500px"
                   />
+                ) : (
+                  <Loader />
                 )}
-              </Col>
-              <Col className="text-start pt-5">
-                <h1 className="text-warning">{movie.Title}</h1>
-                <div className="pb-2">
-                  {movie &&
-                    movie.categories &&
+              </div>
+            </div>
+            <div className="text-start py-2 mt-2 container">
+              <div className="mx-2">
+                <h1 className="text-featured-title py-1">{movie.Title}</h1>
+                <div className="pb-2 d-flex">
+                  {movie.categories &&
                     movie.categories.map((category) => {
                       return (
                         <Badge pill bg="primary" className="mx-1">
@@ -51,16 +64,20 @@ export default function View() {
                         </Badge>
                       );
                     })}
+                  <p className="text-secondary mb-0 mx-2 movie-card-text">
+                    1hr 05mins <span className="text-dark">&bull;</span> Tamil{' '}
+                    <span className="text-dark">&bull;</span> Sept 10, 2021
+                  </p>
                 </div>
                 <p>{movie.Description}</p>
-              </Col>
-            </Row>
+              </div>
+            </div>
           </div>
           <MovieBrowser />
         </div>
       </div>
     </section>
   ) : (
-    'loading...'
+    <Loader />
   );
 }
