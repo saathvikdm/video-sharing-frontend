@@ -51,7 +51,8 @@ export default function FeaturedMovieCard({ data }) {
                           </h1>
                           <div className="featured-meta animate__animated animate__fadeInRight">
                             <p className="text-info mb-1">
-                              1hr 05mins <span className="text-light">&bull;</span> Tamil
+                              1hr 05mins <span className="text-light">&bull;</span>&nbsp;
+                              {item.lang}&nbsp;
                             </p>
                             <p className="featured-description">{item.Description}</p>
                           </div>

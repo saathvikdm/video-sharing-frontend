@@ -7,6 +7,7 @@
     "created_at": "2021-11-02T10:18:11.000Z",
     "updated_at": "2021-11-03T17:58:35.000Z",
     "Featured": true,
+    "lang": "Hindi",
     "Video": {
       "id": 10,
       "name": "car-detection.mp4",
@@ -82,6 +83,7 @@
     "created_at": "2021-11-03T06:32:44.000Z",
     "updated_at": "2021-11-05T06:29:50.000Z",
     "Featured": true,
+    "lang": "Kannada",
     "Video": {
       "id": 8,
       "name": "movie.mp4",
@@ -172,6 +174,7 @@
     "created_at": "2021-11-03T06:34:57.000Z",
     "updated_at": "2021-11-03T17:59:10.000Z",
     "Featured": true,
+    "lang": "Hindi",
     "Video": {
       "id": 9,
       "name": "classroom.mp4",
@@ -240,6 +243,7 @@
     "created_at": "2021-11-03T06:47:40.000Z",
     "updated_at": "2021-11-03T18:04:46.000Z",
     "Featured": false,
+    "lang": "Tamil",
     "Video": {
       "id": 8,
       "name": "movie.mp4",
@@ -308,6 +312,7 @@
     "created_at": "2021-11-03T06:51:40.000Z",
     "updated_at": "2021-11-03T18:04:53.000Z",
     "Featured": false,
+    "lang": "Hindi",
     "Video": {
       "id": 8,
       "name": "movie.mp4",
@@ -376,6 +381,7 @@
     "created_at": "2021-11-03T16:58:06.000Z",
     "updated_at": "2021-11-03T18:04:38.000Z",
     "Featured": false,
+    "lang": "Kannada",
     "Video": {
       "id": 8,
       "name": "movie.mp4",
@@ -466,6 +472,7 @@
     "created_at": "2021-11-08T10:51:41.000Z",
     "updated_at": "2021-11-08T10:51:44.000Z",
     "Featured": true,
+    "lang": "Telugu",
     "Video": {
       "id": 10,
       "name": "car-detection.mp4",
@@ -574,6 +581,7 @@
     "created_at": "2021-11-27T06:50:37.000Z",
     "updated_at": "2021-11-27T06:50:39.000Z",
     "Featured": false,
+    "lang": "Kannada",
     "Video": {
       "id": 14,
       "name": "This is SO unlike Apple....mp4",

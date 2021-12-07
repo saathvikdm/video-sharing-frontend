@@ -50,7 +50,8 @@ export default function View(props) {
                       );
                     })}
                   <p className="text-secondary mb-0 mx-2 movie-card-text">
-                    1hr 05mins <span className="text-dark">&bull;</span> Tamil{' '}
+                    1hr 05mins <span className="text-dark">&bull;</span>
+                    &nbsp;{movie.lang}&nbsp;
                     <span className="text-dark">&bull;</span> Sept 10, 2021
                   </p>
                 </div>
