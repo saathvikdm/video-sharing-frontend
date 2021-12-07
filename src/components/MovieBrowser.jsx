@@ -1,10 +1,12 @@
-import { faPlay } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+
 import Loader from './Loader';
 import MovieCard from './MovieCard';
+
+import { Button } from 'react-bootstrap';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function MovieBrowser() {
   const [movies, setMovies] = useState([]);

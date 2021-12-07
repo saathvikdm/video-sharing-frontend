@@ -5,12 +5,13 @@ import 'animate.css';
 
 import { BrowserRouter as Router, Switch, Route, withRouter } from 'react-router-dom';
 
-import NavbarComponent from './components/NavbarComponent';
-
 import Home from './pages/Home';
 import View from './pages/View';
-import ScrollToTop from './utils/ScrollToTop';
+
+import NavbarComponent from './components/NavbarComponent';
 import Footer from './components/Footer';
+
+import ScrollToTop from './utils/ScrollToTop';
 
 function App() {
   return (

@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Carousel, Col, Ratio, Row, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+
+import AnimatedPlay from './AnimatedPlay';
+import Loader from './Loader';
+
+import { Button, Carousel, Col, Ratio, Row, Spinner } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 
-import Animate from 'animate.css-react';
-
 import Feat from '../feat.png';
 import Thumb from '../thumbnail5.jpg';
-import AnimatedPlay from './AnimatedPlay';
-import Loader from './Loader';
 
 export default function FeaturedMovieCard() {
   const [featured, setFeatured] = useState();

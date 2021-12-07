@@ -1,4 +1,5 @@
 import React from 'react';
+
 import About from '../components/About';
 import FeaturedMovieCard from '../components/FeaturedMovieGroup';
 import Hero from '../components/Hero';

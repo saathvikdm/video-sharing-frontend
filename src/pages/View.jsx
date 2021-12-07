@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Col, Row, Badge, Ratio } from 'react-bootstrap';
 import { useParams } from 'react-router';
+import VideoPlayer from 'react-video-js-player';
+
 import Loader from '../components/Loader';
 import MovieBrowser from '../components/MovieBrowser';
-import VideoPlayer from 'react-video-js-player';
+
+import { Col, Row, Badge, Ratio } from 'react-bootstrap';
 
 export default function View(props) {
   const { id } = useParams();
