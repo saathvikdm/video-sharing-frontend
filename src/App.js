@@ -13,6 +13,10 @@ import Footer from './components/Footer';
 
 import ScrollToTop from './utils/ScrollToTop';
 
+import data from './static-data.json';
+
+console.log(data);
+
 function App() {
   return (
     <div className="App">

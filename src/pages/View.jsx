@@ -7,19 +7,16 @@ import MovieBrowser from '../components/MovieBrowser';
 
 import { Col, Row, Badge, Ratio } from 'react-bootstrap';
 
+import data from '../static-data.json';
+
 export default function View(props) {
   const { id } = useParams();
 
   const [movie, setMovie] = useState({});
 
-  const defaultUrlPath = 'http://localhost:1337';
-
   useEffect(() => {
-    fetch(`${defaultUrlPath}/videos/${id}`)
-      .then((res) => res.json())
-      .then((res) => {
-        setMovie(res);
-      });
+    const mov = data.filter((m) => m.id == id);
+    setMovie(mov[0]);
   }, [id]);
 
   useEffect(() => {
@@ -34,21 +31,7 @@ export default function View(props) {
             <div className="bg-black moviePlayer">
               <div className="h-50 d-flex justify-content-center">
                 {movie && movie.Video ? (
-                  // <video
-                  //   autoPlay
-                  //   controls
-                  //   playsInline
-                  //   // src={`${defaultUrlPath}${movie.Video.url}`}
-                  //   src="http://localhost:1337/uploads/output/output.m3u8"
-                  //   controlsList="nodownload"
-                  //   className="moviePlayer"
-                  //   style={{ maxWidth: '100%' }}
-                  // />
-                  <VideoPlayer
-                    controls={true}
-                    src="http://localhost:1337/uploads/output/output.m3u8"
-                    height="500px"
-                  />
+                  <VideoPlayer controls={true} src={movie.Video.url} height="500px" />
                 ) : (
                   <Loader />
                 )}
@@ -75,7 +58,7 @@ export default function View(props) {
               </div>
             </div>
           </div>
-          <MovieBrowser />
+          <MovieBrowser data={data} />
         </div>
       </div>
     </section>

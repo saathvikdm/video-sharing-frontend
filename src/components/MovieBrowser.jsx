@@ -8,23 +8,12 @@ import { Button } from 'react-bootstrap';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default function MovieBrowser() {
+export default function MovieBrowser({ data }) {
   const [movies, setMovies] = useState([]);
 
-  const defaultUrlPath = 'http://localhost:1337';
-
   useEffect(() => {
-    fetch(`${defaultUrlPath}/videos`)
-      .then((res) => res.json())
-      .then((res) => {
-        setMovies(res);
-      })
-      .catch((err) => console.log(err));
-  }, []);
-
-  useEffect(() => {
-    console.log(movies[0]);
-  }, [movies]);
+    setMovies(data);
+  }, [data]);
 
   return (
     <section className="bg-light py-5 text-dark">
