@@ -168,7 +168,12 @@
 }
 
 .moviePlayer {
+  height: auto;
+}
+
+.video-player {
   height: 500px;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -207,6 +212,20 @@
   .featured-description {
     -webkit-line-clamp: 2;
   }
+
+  .carousel-inner {
+    height: 70vh;
+  }
+
+  .featured-overlay {
+    height: 70vh;
+  }
+
+  .featured-overlay-background {
+    position: absolute;
+    object-fit: cover;
+    height: 70vh !important;
+  }
 }
 
 @media (max-width: 992px) {
@@ -220,5 +239,9 @@
 
   .movie-card-text {
     font-size: 0.8em !important;
+  }
+
+  .video-player {
+    height: 28vh;
   }
 }

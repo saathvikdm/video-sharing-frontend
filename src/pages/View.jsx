@@ -29,9 +29,9 @@ export default function View(props) {
         <div className="bg-light w-100 text-dark">
           <div className="movieContainer">
             <div className="bg-black moviePlayer">
-              <div className="h-50 d-flex justify-content-center">
+              <div className="d-flex justify-content-center">
                 {movie && movie.Video ? (
-                  <VideoPlayer controls={true} src={movie.Video.url} height="500px" />
+                  <VideoPlayer controls={true} src={movie.Video.url} className="video-player" />
                 ) : (
                   <Loader />
                 )}

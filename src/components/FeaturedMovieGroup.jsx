@@ -40,11 +40,15 @@ export default function FeaturedMovieCard({ data }) {
                   <Carousel.Item>
                     <div className="featured-overlay">
                       <Ratio aspectRatio={ratio > 1000 ? '21x9' : '1x1'}>
-                        <img className="d-block w-100" src={item.Thumbnail.url} alt="First slide" />
+                        <img
+                          className="d-block w-100 featured-overlay-background"
+                          src={item.Thumbnail.url}
+                          alt="First slide"
+                        />
                       </Ratio>
                     </div>
                     <Carousel.Caption className="carousel-caption">
-                      <Row className="d-flex align-items-center featured-row">
+                      <Row className="d-flex align-items-center featured-row mt-5 mt-sm-2 mt-md-0">
                         <Col lg={6} className="text-start mt-3 mt-lg-0 mb-md-3 mb-lg-0">
                           <h1 className="text-featured-title featured-title animate__animated animate__fadeInRight animate__fast">
                             {item.Title}
