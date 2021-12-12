@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+.text-primary-blue {
+  color: #001c64 !important;
+}
+
+.bg-primary-blue {
+  background-color: #042885 !important;
+  border-color: #001c64 !important;
+}
+
 .select-disabled {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -25,6 +34,7 @@
 
 .text-featured-title {
   color: #f69b00;
+  font-size: 2rem;
 }
 
 .movie-card {
@@ -91,6 +101,7 @@
 
 .inner_circle {
   fill: #0b5ed7;
+  fill: #042885;
 }
 
 .play {
@@ -176,6 +187,52 @@
   width: 100%;
 }
 
+.social-shares > * {
+  margin: 5px;
+}
+
+.file {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.pdf-icon {
+  height: 36px !important;
+  width: 50px !important;
+  /* color: #001c64ad; */
+  color: #bf1e1eab;
+}
+
+.audio-icon {
+  height: 36px !important;
+  width: 50px !important;
+  color: #001c64ad;
+  /* color: #bf1e1eab; */
+}
+
+.view-desc {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  transition: 0.5s;
+}
+
+.view-desc-open {
+  -webkit-line-clamp: none;
+  transition: 0.5s;
+}
+
+.fade_rule {
+  height: 1px;
+  background-color: #e6e6e6;
+  width: 80%;
+  margin: 0 auto;
+  background-image: linear-gradient(left, white 2%, #e6e6e6 50%, white 98%);
+}
+
 @media (max-width: 768px) {
   .movie-card {
     height: 120px;
@@ -243,5 +300,15 @@
 
   .video-player {
     height: 28vh;
+  }
+
+  .text-featured-title {
+    color: #f69b00;
+    /* color: #3a5088; */
+    font-size: 1.4rem;
+  }
+
+  .movie-card-title {
+    font-size: 1.2rem;
   }
 }

@@ -37,13 +37,13 @@ export default function MovieCard({ data }) {
                 overflow: 'hidden',
                 whiteSpace: 'nowrap',
               }}
-              className="mb-1"
+              className="mb-1 movie-card-title text-primary-blue"
             >
               {data.Title}
             </Card.Title>
             <Card.Text>
               <p className="text-secondary mb-0 movie-card-text">
-                {data.lang}&nbsp;
+                <span className="text-dark">{data.lang}&nbsp;</span>
                 <span className="text-dark">&bull;</span> Sept 10, 2021
               </p>
             </Card.Text>

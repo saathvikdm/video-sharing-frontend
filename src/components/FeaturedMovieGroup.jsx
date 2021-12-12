@@ -62,7 +62,7 @@ export default function FeaturedMovieCard({ data }) {
                           </div>
                           <Button
                             variant="primary"
-                            className="animate__animated animate__fadeInRight animate__slow"
+                            className="animate__animated animate__fadeInRight animate__slow bg-primary-blue"
                           >
                             {' '}
                             <Link

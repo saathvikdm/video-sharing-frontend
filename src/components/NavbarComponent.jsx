@@ -10,7 +10,7 @@ export default function NavbarComponent() {
     <Navbar collapseOnSelect expand="lg" sticky="top" bg="light" variant="light">
       <Container>
         <Navbar.Brand href="/">
-          <img src={Logo} alt="BashaMandakini logo" height="50px" className="mt-1" />
+          <img src={Logo} alt="BashaMandakini logo" height="30px" className="mt-1" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

@@ -73,6 +73,30 @@
         "created_at": "2021-11-02T10:15:29.000Z",
         "updated_at": "2021-11-02T10:15:30.000Z"
       }
+    ],
+    "audios": [
+      {
+        "id": 1,
+        "name": "This is an audio file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      },
+      {
+        "id": 2,
+        "name": "This is another audio file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      }
+    ],
+    "pdfs": [
+      {
+        "id": 1,
+        "name": "This is a pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      },
+      {
+        "id": 2,
+        "name": "This is another pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      }
     ]
   },
   {
@@ -164,6 +188,30 @@
         "created_at": "2021-11-02T10:15:34.000Z",
         "updated_at": "2021-11-02T10:15:35.000Z"
       }
+    ],
+    "audios": [
+      {
+        "id": 1,
+        "name": "This is an audio file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      },
+      {
+        "id": 2,
+        "name": "This is another audio file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      }
+    ],
+    "pdfs": [
+      {
+        "id": 1,
+        "name": "This is a pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      },
+      {
+        "id": 2,
+        "name": "This is another pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      }
     ]
   },
   {
@@ -232,6 +280,30 @@
         "published_at": "2021-11-02T10:15:25.000Z",
         "created_at": "2021-11-02T10:15:23.000Z",
         "updated_at": "2021-11-02T10:15:25.000Z"
+      }
+    ],
+    "audios": [
+      {
+        "id": 1,
+        "name": "This is an audio file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      },
+      {
+        "id": 2,
+        "name": "This is another audio file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      }
+    ],
+    "pdfs": [
+      {
+        "id": 1,
+        "name": "This is a pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      },
+      {
+        "id": 2,
+        "name": "This is another pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
       }
     ]
   },
@@ -302,6 +374,30 @@
         "created_at": "2021-11-02T10:15:23.000Z",
         "updated_at": "2021-11-02T10:15:25.000Z"
       }
+    ],
+    "audios": [
+      {
+        "id": 1,
+        "name": "This is an audio file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      },
+      {
+        "id": 2,
+        "name": "This is another audio file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      }
+    ],
+    "pdfs": [
+      {
+        "id": 1,
+        "name": "This is a pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      },
+      {
+        "id": 2,
+        "name": "This is another pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      }
     ]
   },
   {
@@ -370,6 +466,30 @@
         "published_at": "2021-11-02T10:15:30.000Z",
         "created_at": "2021-11-02T10:15:29.000Z",
         "updated_at": "2021-11-02T10:15:30.000Z"
+      }
+    ],
+    "audios": [
+      {
+        "id": 1,
+        "name": "This is an audio file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      },
+      {
+        "id": 2,
+        "name": "This is another audio file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      }
+    ],
+    "pdfs": [
+      {
+        "id": 1,
+        "name": "This is a pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      },
+      {
+        "id": 2,
+        "name": "This is another pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
       }
     ]
   },
