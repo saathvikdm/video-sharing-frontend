@@ -113,7 +113,7 @@ export default function View(props) {
                         {movie.categories &&
                           movie.categories.map((category) => {
                             return (
-                              <Badge pill bg="primary" className="mx-1">
+                              <Badge pill bg="none" className="mx-1 bg-primary-blue">
                                 {category.name}
                               </Badge>
                             );
@@ -121,7 +121,7 @@ export default function View(props) {
                       </p>
                     </div>
                     <span
-                      className="text-capitalize fs-6 fw-bold select-disabled mb-4"
+                      className="text-capitalize fst-italic fs-6 fw-bold select-disabled mb-4"
                       onClick={() => {
                         setToggle(!toggle);
                       }}
