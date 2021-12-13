@@ -2,14 +2,28 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import VideoPlayer from 'react-video-js-player';
 
-import { FacebookShareButton, FacebookIcon, TwitterIcon, TwitterShareButton } from 'react-share';
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterIcon,
+  TwitterShareButton,
+  WhatsappIcon,
+  WhatsappShareButton,
+} from 'react-share';
 
 import Loader from '../components/Loader';
 import MovieBrowser from '../components/MovieBrowser';
 
-import { Col, Row, Badge, Ratio, Accordion } from 'react-bootstrap';
-import { faFilePdf, faFileAudio } from '@fortawesome/free-solid-svg-icons';
+import { Col, Row, Badge, Ratio, Accordion, Modal, Button } from 'react-bootstrap';
+import {
+  faFilePdf,
+  faFileAudio,
+  faChevronUp,
+  faChevronDown,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import staticAudio from '../static.mp3';
 
 import data from '../static-data.json';
 
@@ -17,7 +31,19 @@ export default function View(props) {
   const { id } = useParams();
 
   const [movie, setMovie] = useState({});
+  const [audioTitle, setAudioTitle] = useState('');
   const [toggle, setToggle] = useState(false);
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => {
+    setAudioTitle(null);
+    setShow(false);
+  };
+  const handleShow = (title) => {
+    setAudioTitle(title);
+    setShow(true);
+  };
 
   useEffect(() => {
     const mov = data.filter((m) => m.id == id);
@@ -44,7 +70,7 @@ export default function View(props) {
             </div>
             <div className="text-start py-2 mt-2 container">
               <div className="mx-0">
-                <h1 className="text-featured-title text-primary-blue py-1">{movie.Title}</h1>
+                <h1 className="text-featured-title text-primary-blue pb-0">{movie.Title}</h1>
                 <div className="pb-2 d-flex">
                   <p className="text-secondary mb-0 movie-card-text">
                     {/* 1hr 05mins <span className="text-dark">&bull;</span> */}
@@ -53,27 +79,20 @@ export default function View(props) {
                   </p>
                 </div>
                 <div className="social-shares">
-                  <span className="fst-italic">Share on social media: </span>
-                  <FacebookShareButton
-                    url={'https://peing.net/ja/'}
-                    quote={'フェイスブックはタイトルが付けれるようです'}
-                    hashtag={'#hashtag'}
-                    description={'aiueo'}
-                    className="Demo__some-network__share-button"
-                  >
+                  <span className="fst-italic py-2">Share on social media: </span>
+                  <FacebookShareButton className="Demo__some-network__share-button">
                     <FacebookIcon size={32} round />
                   </FacebookShareButton>
-                  <TwitterShareButton
-                    title={'test'}
-                    url={'https://peing.net/ja/'}
-                    hashtags={['hashtag1', 'hashtag2']}
-                  >
+                  <TwitterShareButton title={'test'}>
                     <TwitterIcon size={32} round />
                   </TwitterShareButton>
+                  <WhatsappShareButton title={'test'}>
+                    <WhatsappIcon size={32} round />
+                  </WhatsappShareButton>
                 </div>
                 <div className="mx-1">
                   <div className="d-flex flex-column">
-                    <p className={`view-desc${toggle ? '-open' : ''} mb-1`}>{movie.Description}</p>
+                    <p className={`view-desc${toggle ? '-open' : ''} py-2`}>{movie.Description}</p>
                     <div className={`${toggle ? '' : 'd-none'}`}>
                       {movie.audios && (
                         <div className="d-flex align-items-start py-2">
@@ -85,7 +104,56 @@ export default function View(props) {
                                   <div className="file">
                                     <FontAwesomeIcon icon={faFileAudio} className="audio-icon" />{' '}
                                     &ensp;
-                                    <a href={audio.url}>{audio.name}</a>
+                                    <div
+                                      //  href={divudio.url}
+                                      onClick={(event) => {
+                                        handleShow(event.target.innerHTML);
+                                      }}
+                                    >
+                                      {audio.name}
+                                    </div>
+                                    <Modal
+                                      show={show}
+                                      onHide={handleClose}
+                                      backdrop="static"
+                                      keyboard={false}
+                                      centered
+                                    >
+                                      <Modal.Header closeButton>
+                                        <Modal.Title>
+                                          <div className="d-flex align-items-center">
+                                            <FontAwesomeIcon
+                                              icon={faFileAudio}
+                                              className="audio-icon"
+                                            />
+                                            <h5 className="mb-0">{audioTitle}</h5>
+                                          </div>
+                                        </Modal.Title>
+                                      </Modal.Header>
+                                      <Modal.Body>
+                                        <div className="w-auto">
+                                          <p className="px-2 py-2">
+                                            Brief description of the audio file. Lorem ipsum dolor
+                                            sit amet consectetur, adipisicing elit. Delectus
+                                            temporibus, hic iusto ipsum sapiente sit itaque
+                                            distinctio voluptatum.
+                                          </p>
+                                          <audio controls>
+                                            <source src={staticAudio} type="audio/mpeg" />
+                                            Your browser does not support the audio element.
+                                          </audio>
+                                        </div>
+                                      </Modal.Body>
+                                      <Modal.Footer>
+                                        <Button
+                                          variant="primary"
+                                          className="bg-primary-blue"
+                                          onClick={handleClose}
+                                        >
+                                          Close
+                                        </Button>
+                                      </Modal.Footer>
+                                    </Modal>
                                   </div>
                                 );
                               })}
@@ -108,26 +176,37 @@ export default function View(props) {
                           </div>
                         </div>
                       )}
-                      <p>
+                      <p className="py-2">
                         Categories:{' '}
                         {movie.categories &&
                           movie.categories.map((category) => {
                             return (
-                              <Badge pill bg="none" className="mx-1 bg-primary-blue">
+                              <Badge pill bg="none" className="mx-1 bg-primary-blue ">
                                 {category.name}
                               </Badge>
                             );
                           })}
                       </p>
                     </div>
-                    <span
-                      className="text-capitalize fst-italic fs-6 fw-bold select-disabled mb-4"
+                    <div
+                      className="d-flex align-items-start"
                       onClick={() => {
                         setToggle(!toggle);
                       }}
                     >
-                      Show {!toggle ? 'more' : 'less'}
-                    </span>
+                      <span className="text-capitalize fst-italic fs-6 fw-bold select-disabled mb-4">
+                        Show {!toggle ? 'more' : 'less'}{' '}
+                      </span>
+                      <div className="mx-2">
+                        <FontAwesomeIcon
+                          size="lg"
+                          icon={!toggle ? faChevronDown : faChevronUp}
+                          // color="linear-gradient(
+                          //   264deg, , #ed6a00);"
+                          color="#f69b00"
+                        />
+                      </div>
+                    </div>
                   </div>
 
                   <div class="fade_rule mt-3"></div>

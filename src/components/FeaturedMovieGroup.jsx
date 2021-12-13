@@ -74,24 +74,24 @@ export default function FeaturedMovieCard({ data }) {
                           </Button>
                         </Col>
                         <Col lg={6}>
-                          <div className="featured-thumbnail-container  animate__animated animate__fadeInLeft animate__delay-1s">
-                            <div className="featured-thumbnail-play">
-                              <Link
-                                to={`/view/${item.id}`}
-                                style={{ textDecoration: 'none', color: 'inherit' }}
-                              >
+                          <Link
+                            to={`/view/${item.id}`}
+                            style={{ textDecoration: 'none', color: 'inherit' }}
+                          >
+                            <div className="featured-thumbnail-container  animate__animated animate__fadeInLeft animate__delay-1s">
+                              <div className="featured-thumbnail-play">
                                 <AnimatedPlay />
-                              </Link>
+                              </div>
+                              <Ratio aspectRatio="16x9" className="featured-thumbnail-overlay">
+                                <img
+                                  className="d-block w-100 featured-thumbnail"
+                                  src={item.Thumbnail.url}
+                                  alt="First slide"
+                                  height="350px"
+                                />
+                              </Ratio>
                             </div>
-                            <Ratio aspectRatio="16x9" className="featured-thumbnail-overlay">
-                              <img
-                                className="d-block w-100 featured-thumbnail"
-                                src={item.Thumbnail.url}
-                                alt="First slide"
-                                height="350px"
-                              />
-                            </Ratio>
-                          </div>
+                          </Link>
                         </Col>
                       </Row>
                     </Carousel.Caption>

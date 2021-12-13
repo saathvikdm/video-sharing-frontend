@@ -233,6 +233,15 @@
   border-color: #001c64 !important;
 }
 
+.bg-primary-blue:hover {
+  background-color: #001c63 !important;
+  border-color: #011444 !important;
+}
+
+.modal-body audio {
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .movie-card {
     height: 120px;
