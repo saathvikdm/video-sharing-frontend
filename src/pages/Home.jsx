@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <>
       <FeaturedMovieCard data={data} />
-      <About />
       <MovieBrowser data={data} />
+      <About />
     </>
   );
 }

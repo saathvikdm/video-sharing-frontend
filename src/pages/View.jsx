@@ -14,36 +14,21 @@ import {
 import Loader from '../components/Loader';
 import MovieBrowser from '../components/MovieBrowser';
 
-import { Col, Row, Badge, Ratio, Accordion, Modal, Button } from 'react-bootstrap';
-import {
-  faFilePdf,
-  faFileAudio,
-  faChevronUp,
-  faChevronDown,
-} from '@fortawesome/free-solid-svg-icons';
+import { Col, Row, Badge, Ratio, Accordion, Modal, Button, Nav, Dropdown } from 'react-bootstrap';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import staticAudio from '../static.mp3';
-
 import data from '../static-data.json';
+import FileDownload from '../components/FileDownload';
+import ShowMore from '../components/ShowMore';
 
 export default function View(props) {
   const { id } = useParams();
 
   const [movie, setMovie] = useState({});
-  const [audioTitle, setAudioTitle] = useState('');
   const [toggle, setToggle] = useState(false);
 
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => {
-    setAudioTitle(null);
-    setShow(false);
-  };
-  const handleShow = (title) => {
-    setAudioTitle(title);
-    setShow(true);
-  };
+  const [descriptionToggle, setDescriptionToggle] = useState(true);
 
   useEffect(() => {
     const mov = data.filter((m) => m.id == id);
@@ -91,183 +76,116 @@ export default function View(props) {
                   </WhatsappShareButton>
                 </div>
                 <div className="mx-1">
-                  <div className="d-flex flex-column">
-                    <p className={`view-desc${toggle ? '-open' : ''} py-2`}>{movie.Description}</p>
-                    <div className={`${toggle ? '' : 'd-none'}`}>
-                      {movie.audios && (
-                        <div className="d-flex align-items-start py-2">
-                          Audio(s):
-                          <div className="flex-column">
-                            {movie.audios &&
-                              movie.audios.map((audio) => {
-                                return (
-                                  <div className="file">
-                                    <FontAwesomeIcon icon={faFileAudio} className="audio-icon" />{' '}
-                                    &ensp;
-                                    <div
-                                      //  href={divudio.url}
-                                      onClick={(event) => {
-                                        handleShow(event.target.innerHTML);
-                                      }}
-                                    >
-                                      {audio.name}
-                                    </div>
-                                    <Modal
-                                      show={show}
-                                      onHide={handleClose}
-                                      backdrop="static"
-                                      keyboard={false}
-                                      centered
-                                    >
-                                      <Modal.Header closeButton>
-                                        <Modal.Title>
-                                          <div className="d-flex align-items-center">
-                                            <FontAwesomeIcon
-                                              icon={faFileAudio}
-                                              className="audio-icon"
-                                            />
-                                            <h5 className="mb-0">{audioTitle}</h5>
-                                          </div>
-                                        </Modal.Title>
-                                      </Modal.Header>
-                                      <Modal.Body>
-                                        <div className="w-auto">
-                                          <p className="px-2 py-2">
-                                            Brief description of the audio file. Lorem ipsum dolor
-                                            sit amet consectetur, adipisicing elit. Delectus
-                                            temporibus, hic iusto ipsum sapiente sit itaque
-                                            distinctio voluptatum.
-                                          </p>
-                                          <audio controls>
-                                            <source src={staticAudio} type="audio/mpeg" />
-                                            Your browser does not support the audio element.
-                                          </audio>
-                                        </div>
-                                      </Modal.Body>
-                                      <Modal.Footer>
-                                        <Button
-                                          variant="primary"
-                                          className="bg-primary-blue"
-                                          onClick={handleClose}
-                                        >
-                                          Close
-                                        </Button>
-                                      </Modal.Footer>
-                                    </Modal>
-                                  </div>
-                                );
-                              })}
-                          </div>
-                        </div>
-                      )}
-                      {movie.pdfs && (
-                        <div className="d-flex align-items-start py-2">
-                          PDF(s):
-                          <div className="flex-column">
-                            {movie.pdfs &&
-                              movie.pdfs.map((pdf) => {
-                                return (
-                                  <div className="file">
-                                    <FontAwesomeIcon icon={faFilePdf} className="pdf-icon" /> &ensp;
-                                    <a href={pdf.url}>{pdf.name}</a>
-                                  </div>
-                                );
-                              })}
-                          </div>
-                        </div>
-                      )}
-                      <p className="py-2">
-                        Categories:{' '}
-                        {movie.categories &&
-                          movie.categories.map((category) => {
-                            return (
-                              <Badge pill bg="none" className="mx-1 bg-primary-blue ">
-                                {category.name}
-                              </Badge>
-                            );
-                          })}
-                      </p>
-                    </div>
-                    <div
-                      className="d-flex align-items-start"
-                      onClick={() => {
-                        setToggle(!toggle);
-                      }}
-                    >
-                      <span className="text-capitalize fst-italic fs-6 fw-bold select-disabled mb-4">
-                        Show {!toggle ? 'more' : 'less'}{' '}
-                      </span>
-                      <div className="mx-2">
-                        <FontAwesomeIcon
-                          size="lg"
-                          icon={!toggle ? faChevronDown : faChevronUp}
-                          // color="linear-gradient(
-                          //   264deg, , #ed6a00);"
-                          color="#f69b00"
-                        />
-                      </div>
-                    </div>
-                  </div>
+                  <Nav variant="tabs" defaultActiveKey="description">
+                    <Nav.Item>
+                      <Nav.Link
+                        eventKey="description"
+                        className="text-primary-blue"
+                        onClick={(e) => setDescriptionToggle(true)}
+                      >
+                        Description
+                      </Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link
+                        eventKey="transcript"
+                        className="text-primary-blue"
+                        onClick={(e) => setDescriptionToggle(false)}
+                      >
+                        Transcript
+                      </Nav.Link>
+                    </Nav.Item>
+                  </Nav>
 
-                  <div class="fade_rule mt-3"></div>
-                </div>
-                {/* <Accordion flush>
-                  <Accordion.Item>
-                    <Accordion.Header>
-                      Read more...
-                    </Accordion.Header>
-                    <Accordion.Body>
-                      <div className="mx-1">
-                        <p className="view-desc">{movie.Description}</p>
-                        <p>
-                          Categories:{' '}
-                          {movie.categories &&
-                            movie.categories.map((category) => {
-                              return (
-                                <Badge pill bg="primary" className="mx-1">
-                                  {category.name}
-                                </Badge>
-                              );
-                            })}
+                  <div className="d-flex flex-column">
+                    {descriptionToggle ? (
+                      <>
+                        <p className={`view-desc${toggle ? '-open' : ''} py-2`}>
+                          {movie.Description}
                         </p>
-                        {movie.audios && (
-                          <div className="d-flex align-items-start py-2">
-                            Audio:
+                        <div className={`${toggle ? '' : 'd-none'}`}>
+                          <div className="my-2 view-downloads d-flex flex-column flex-lg-row justify-content-around">
+                            {movie.pdfs && (
+                              <div className="flex-column">
+                                {movie.pdfs &&
+                                  movie.pdfs.map((pdf) => {
+                                    return <FileDownload item={pdf} icon={'pdf'} />;
+                                  })}
+                              </div>
+                            )}
                             <div className="flex-column">
                               {movie.audios &&
                                 movie.audios.map((audio) => {
-                                  return (
-                                    <div className="file">
-                                      <FontAwesomeIcon icon={faFileAudio} className="audio-icon" />{' '}
-                                      &ensp;
-                                      <a href={audio.url}>{audio.name}</a>
-                                    </div>
-                                  );
+                                  return <FileDownload item={audio} icon={'audio'} type="audio" />;
                                 })}
                             </div>
                           </div>
-                        )}
-                        {movie.pdfs && (
-                          <div className="d-flex align-items-start py-2">
-                            PDF(s):
-                            <div className="flex-column">
-                              {movie.pdfs &&
-                                movie.pdfs.map((pdf) => {
-                                  return (
-                                    <div className="file">
-                                      <FontAwesomeIcon icon={faFilePdf} className="pdf-icon" />{' '}
-                                      &ensp;
-                                      <a href={pdf.url}>{pdf.name}</a>
-                                    </div>
-                                  );
-                                })}
-                            </div>
-                          </div>
-                        )}
+                          <p className="py-2">
+                            Categories:{' '}
+                            {movie.categories &&
+                              movie.categories.map((category) => {
+                                return (
+                                  <Badge pill bg="none" className="mx-1 bg-primary-blue ">
+                                    {category.name}
+                                  </Badge>
+                                );
+                              })}
+                          </p>
+                        </div>
+                      </>
+                    ) : (
+                      <div>
+                        <div className="d-flex flex-row align-items-center">
+                          <Dropdown className="my-3">
+                            <Dropdown.Toggle
+                              variant="secondary"
+                              id="dropdown-basic"
+                              // className="bg-primary-blue"
+                            >
+                              English
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                              <Dropdown.Item href="#">English</Dropdown.Item>
+                              <Dropdown.Item href="#">Hindi</Dropdown.Item>
+                              <Dropdown.Item href="#">Kannada</Dropdown.Item>
+                            </Dropdown.Menu>
+                          </Dropdown>
+                          <a href="#" target="_blank" referrerPolicy="no-referrer">
+                            <p className="mx-3 my-0">
+                              <strong>
+                                Download Transcript&ensp;
+                                <FontAwesomeIcon icon={faDownload} />
+                              </strong>
+                            </p>
+                          </a>
+                        </div>
+                        <p className={`view-desc${toggle ? '-open' : ''} py-2`}>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eum
+                          temporibus dolore ipsum autem voluptatum mollitia deleniti ut, obcaecati
+                          quo dicta consequuntur explicabo nemo repellat blanditiis, commodi
+                          nesciunt aut. Obcaecati. Architecto iusto repudiandae odio dolorum illo
+                          corporis ad, tempore, modi non obcaecati natus eligendi ratione? Ratione
+                          corporis delectus totam. Laborum, fugiat accusamus. Sequi asperiores
+                          distinctio temporibus, recusandae unde reiciendis neque. Quidem expedita
+                          dolor perferendis delectus esse ab, vel obcaecati totam deserunt iste sunt
+                          distinctio nemo labore animi accusamus non iure, nobis praesentium fugiat
+                          magni aliquid assumenda. Possimus sed distinctio perferendis. Ullam omnis
+                          mollitia accusantium unde. Aliquid aperiam quaerat labore sunt facere
+                          cumque deserunt expedita magnam sequi atque voluptates possimus tempora,
+                          officiis magni quia vitae itaque, veritatis quas dolorum quam laboriosam.
+                          Minus optio alias id voluptatum, cupiditate harum eligendi libero totam et
+                          doloremque deleniti voluptatibus natus praesentium officia distinctio
+                          omnis, deserunt asperiores modi recusandae rem odit ad iusto. Molestiae,
+                          ducimus enim.
+                        </p>
                       </div>
-                    </Accordion.Body>
-                  </Accordion.Item>
-                </Accordion> */}
+                    )}
+                    <ShowMore setToggle={setToggle} toggle={toggle} />
+                  </div>
+                  {/* Faint sperating line */}
+                  <div class="fade_rule mt-3"></div>
+                </div>
               </div>
             </div>
           </div>
