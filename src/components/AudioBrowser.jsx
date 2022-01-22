@@ -49,7 +49,7 @@ export default function AudioBrowser({ data, page = false }) {
               data={movies}
               RenderComponent={AudioCard}
               pageLimit={2}
-              dataLimit={5}
+              dataLimit={6}
             />
           ) : (
             <Loader content="movies" color="dark" />

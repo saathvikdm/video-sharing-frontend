@@ -46,7 +46,7 @@ export default function MovieBrowser({ data, page = false }) {
                 data={movies}
                 RenderComponent={MovieCard}
                 pageLimit={2}
-                dataLimit={5}
+                dataLimit={8}
               />
             ) : (
               movies.filter((item, idx) => idx < 8).map((movie) => <MovieCard data={movie} />)
