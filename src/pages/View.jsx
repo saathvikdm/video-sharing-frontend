@@ -151,7 +151,7 @@ export default function View(props) {
                               <Dropdown.Item href="#">Kannada</Dropdown.Item>
                             </Dropdown.Menu>
                           </Dropdown>
-                          <a href="#" target="_blank" referrerPolicy="no-referrer">
+                          <a href="#" target="_blank" rel="no-referrer">
                             <p className="mx-3 my-0">
                               <strong>
                                 Download Transcript&ensp;

@@ -7,6 +7,9 @@ import { BrowserRouter as Router, Switch, Route, withRouter } from 'react-router
 
 import Home from './pages/Home';
 import View from './pages/View';
+import About from './pages/About';
+import Videos from './pages/Videos';
+import Audios from './pages/Audios';
 
 import NavbarComponent from './components/NavbarComponent';
 import Footer from './components/Footer';
@@ -25,6 +28,9 @@ function App() {
         <ScrollToTop>
           <Switch>
             <Route path="/view/:id" component={withRouter(View)} />
+            <Route path="/about" component={About} />
+            <Route path="/audios" component={Audios} />
+            <Route path="/videos" component={Videos} />
             <Route exact path="/" component={Home} />
           </Switch>
         </ScrollToTop>

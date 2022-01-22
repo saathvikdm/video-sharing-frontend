@@ -15,6 +15,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import Logo from '../logo.svg';
 import CiilLogo from '../ciil_logo.png';
 import GoiLogo from '../goi_logo.svg';
+import { Link } from 'react-router-dom';
 
 export default function NavbarComponent() {
   return (
@@ -40,15 +41,31 @@ export default function NavbarComponent() {
             <Button variant="outline-secondary">Search</Button>
           </Form> */}
           <Nav className="ms-auto">
-            <LinkContainer to="/">
+            <LinkContainer to="/" exact>
               <Nav.Link>Home</Nav.Link>
             </LinkContainer>
             <NavDropdown title="Browse" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#">Videos</NavDropdown.Item>
-              <NavDropdown.Item href="#">Audios</NavDropdown.Item>
+              <NavDropdown.Item>
+                <Nav.Link>
+                  <Link to={'/videos'} style={{ textDecoration: 'none', color: 'inherit' }}>
+                    Videos
+                  </Link>
+                </Nav.Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <Nav.Link>
+                  <Link to={'/audios'} style={{ textDecoration: 'none', color: 'inherit' }}>
+                    Audios
+                  </Link>
+                </Nav.Link>
+              </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="/about">Team</Nav.Link>
-            <Nav.Link href="/about">About</Nav.Link>
+            <LinkContainer to="/team">
+              <Nav.Link>Team</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/about">
+              <Nav.Link>About</Nav.Link>
+            </LinkContainer>
             <NavDropdown.Divider />
             <Dropdown className="mx-2">
               <Dropdown.Toggle variant="primary" id="dropdown-basic" className="bg-primary-blue">
@@ -61,6 +78,7 @@ export default function NavbarComponent() {
                 <Dropdown.Item href="#">Kannada</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
+            <NavDropdown.Divider />
           </Nav>
           {/* <Nav.Link href="http://localhost:1337/admin/auth/login">Login</Nav.Link>
           <Nav.Link href="http://localhost:1337/admin/auth/login">Sign Up</Nav.Link> */}

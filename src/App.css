@@ -238,6 +238,15 @@
   border-color: #011444 !important;
 }
 
+#pagination-item {
+  color: #001c64 !important;
+}
+
+#pagination-item-active {
+  background-color: #042885 !important;
+  border-color: #001c64 !important;
+}
+
 .modal-body audio {
   width: 100%;
 }
