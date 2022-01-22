@@ -5,7 +5,7 @@ import FeaturedMovieCard from '../components/FeaturedMovieGroup';
 import Hero from '../components/Hero';
 import MovieBrowser from '../components/MovieBrowser';
 
-import data from '../static-data.json';
+import data from '../static-video-data.json';
 
 export default function Home() {
   return (

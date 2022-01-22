@@ -3,6 +3,7 @@
     "id": 1,
     "Title": "Agriculture in Karnataka Part-1",
     "lang": "Kannada",
+    "Featured": true,
     "Description": "Agriculture was known to the Neolithic man in Karnataka. Excavations in the Tekkalakoote region in Ballari district, has yielded remains of horse gram and wheat grain from sixteenth century. Kannada literature has several references to agriculture, such as, Shri Vijaya’s Kaviraaja Maarga, a text belonging to the ninth century, has allusions to rice, black pepper and sugarcane. The poetry of Pampa, the first Kannada poet of the tenth century, alludes to several flowers and fruits.",
     "Thumbnail": {
       "url": "https://vvce.acm.org/ciil/agrikarp1/thumbnail.jpg"
@@ -13,10 +14,299 @@
     },
     "categories": [
       {
-        "name": "Wildlife"
+        "name": "Agriculture"
       },
       {
-        "name": "Nature"
+        "name": "Culture"
+      }
+    ],
+    "pdfs": [
+      {
+        "id": 1,
+        "name": "This is a pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      },
+      {
+        "id": 2,
+        "name": "This is another pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "Title": "Agriculture in Karnataka Part-2",
+    "lang": "Kannada",
+    "Description": "Khushki land crops are called “devamatruka” which means, “gift of God”. Irrigated land crops are called “nadimatruka” which means “gift of water from flowing river”. The main irrigation crop is “batta” or paddy. Although during the rainy season, paddy is cultivated in khushki land. Paddy is grown mainly thrown transplantation.  The crops take about three to four months to grow. They perform “koylu puja” before harvesting the crops. After cutting the crops, they leave it on the fields for a few days before transporting it to the “kana” or threshing yard. Once they have separated the grains from the straw, they use winnowing to separate the chaff. They then fill the grains into gunny bags and transport it to their homes via bullock carts, where they sun-dry the paddy for a few days, and then store it.",
+    "Thumbnail": {
+      "url": "https://vvce.acm.org/ciil/agrikarp1/thumbnail2.jpg"
+    },
+    "Video": {
+      "name": "Agriculture in Karnataka Part-1",
+      "url": "https://vvce.acm.org/ciil/agrikarp1/agrikarp1/agrikarp1.m3u8"
+    },
+    "categories": [
+      {
+        "name": "Agriculture"
+      },
+      {
+        "name": "Culture"
+      }
+    ],
+    "pdfs": [
+      {
+        "id": 1,
+        "name": "This is a pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "Title": "Akkamahadevi",
+    "lang": "Kannada",
+    "Description": "Akkamahadevi is a mystic and poet par excellence in the spiritual history of India. Her life reads like a legend. Many references to her in literature, in both oral and written traditions- Harihara’s Uduthadi Mahadeviyakkana Ragale in 1220 AD, Cennabasavaanka- Mahadeeviyakkana Puraana in 1550 AD, Raacakavi- Mahadeeviyakkana Saangatya in 1600 AD, Paalkurike Soomanatha- Panditaaraadhya Caritra in Telugu in 1250 AD contains some details about Akkamahadevi, Baalapaapaamba- full length poem titled, Mahadeevi Boodhoollaasa, the four variants of Suunyasampaadane revised between 15th and 17th centuries AD make casual references about the life of Akkamahadevi.",
+    "Thumbnail": {
+      "url": "https://vvce.acm.org/ciil/agrikarp1/thumbnail3.jpg"
+    },
+    "Video": {
+      "name": "Agriculture in Karnataka Part-1",
+      "url": "https://vvce.acm.org/ciil/agrikarp1/agrikarp1/agrikarp1.m3u8"
+    },
+    "categories": [
+      {
+        "name": "Literature"
+      },
+      {
+        "name": "Culture"
+      }
+    ],
+    "pdfs": [
+      {
+        "id": 1,
+        "name": "This is a pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      },
+      {
+        "id": 2,
+        "name": "This is another pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "Title": "Maharashtra: The Place",
+    "lang": "Marathi",
+    "Featured": true,
+    "Description": "“Maharashtra” means “great land”, and it has lived up to its name in the past. It has been ruled by dynasties that have stretched their empires, from “Madurai and Rameswaram in the south, Raipur and Jabalpur in the east, Udaipur and Chitrakoot in the north and Girnar in the west (Kuber pref.). Maharashtra was a part of the Ashokan empire in the 2nd century BC. It was subsequently ruled by the Satavahana dynasty for the next 460 years. The Satavahanas divided their empire into sections, and assigned each section to an amatya or minister. They were great “connoisseurs of literature and the arts” (Kuber ch. 1). They are known for building some of the galleries of Ajanta caves, which holds some of the finest artworks of ancient India",
+    "Thumbnail": {
+      "url": "https://vvce.acm.org/ciil/agrikarp1/thumbnail4.jpg"
+    },
+    "Video": {
+      "name": "Agriculture in Karnataka Part-1",
+      "url": "https://vvce.acm.org/ciil/agrikarp1/agrikarp1/agrikarp1.m3u8"
+    },
+    "categories": [
+      {
+        "name": "Land"
+      },
+      {
+        "name": "Culture"
+      }
+    ],
+    "pdfs": [
+      {
+        "id": 1,
+        "name": "This is a pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      },
+      {
+        "id": 2,
+        "name": "This is another pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "Title": "Marathi Theatre",
+    "lang": "Marathi",
+    "Description": "Marathi theatre has not only been providing an entertainment escape route to its audience, but has also been shaping social and political changes, since the 1840s. The origin of Marathi theatre is much debated amongst scholars as Marathi theatre has evolved from folk theatre. Some of the folk theatrical forms that inspired Marathi theatre are, dashavatar, kirtan, lalit, songi bhajan, string puppet theatre and tamasha. The influence of folk literature on Marathi theatre, can be subdivided into two strands. The first strand is the influence from the Hori tradition in the late antiquity and the medieval period. The second strand rises during the early modern period, from the Tanjavur region.",
+    "Thumbnail": {
+      "url": "https://vvce.acm.org/ciil/agrikarp1/thumbnail5.jpg"
+    },
+    "Video": {
+      "name": "Agriculture in Karnataka Part-1",
+      "url": "https://vvce.acm.org/ciil/agrikarp1/agrikarp1/agrikarp1.m3u8"
+    },
+    "categories": [
+      {
+        "name": "Language"
+      },
+      {
+        "name": "Culture"
+      }
+    ],
+    "pdfs": [
+      {
+        "id": 1,
+        "name": "This is a pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      },
+      {
+        "id": 2,
+        "name": "This is another pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "Title": "Saurashtra People in Tamil Nadu",
+    "lang": "Tamil",
+    "Description": "The original home of Saurashtrians is in Gujarat. Although they are presently settled in all major towns in Tamil Nadu. They are concentrated more in Madurai, which is considered as the cultural headquarters. Their origin dates back to when the ancestors of Saurashtrians inhabited the kingdom of Saurashtra in the states of Maharashtra and Gujarat. They are called the Patnulkarar by the Tamils, which means silk-thread weavers. The Saurashtrians introduce each other through their gothras and family names, there are 64 gothras, but Saurasthrians are attached to only 40 gothras. They’re primary language is Saurashtra and secondary language is Tamil.",
+    "Thumbnail": {
+      "url": "https://vvce.acm.org/ciil/agrikarp1/thumbnail6.jpg"
+    },
+    "Video": {
+      "name": "Agriculture in Karnataka Part-1",
+      "url": "https://vvce.acm.org/ciil/agrikarp1/agrikarp1/agrikarp1.m3u8"
+    },
+    "categories": [
+      {
+        "name": "Land"
+      },
+      {
+        "name": "Culture"
+      }
+    ],
+    "pdfs": [
+      {
+        "id": 1,
+        "name": "This is a pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      },
+      {
+        "id": 2,
+        "name": "This is another pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "Title": "Tribes of Tamil Nadu",
+    "lang": "Tamil",
+    "Description": "The Soliga tribe has originated from the Biligiriranga Hills in the south-eastern corner of the Mysuru district, adjoining Tamil Nadu. Today, they reside in the hilly forested areas of Salem, Erode, Namakkal and Nilgiri districts of Tamil Nadu. The word, ‘soliga’ is derived from the Tamil word, ‘solai’, which means thickets. Although some believe that their name was derived from ‘swamiga’, which refers to Mahadeswara Swamy, their most favoured deity. Their language, Soliga, is a Dravidian tribal language, which includes several Kannada words. ",
+    "Thumbnail": {
+      "url": "https://vvce.acm.org/ciil/agrikarp1/thumbnail7.jpg"
+    },
+    "Video": {
+      "name": "Agriculture in Karnataka Part-1",
+      "url": "https://vvce.acm.org/ciil/agrikarp1/agrikarp1/agrikarp1.m3u8"
+    },
+    "categories": [
+      {
+        "name": "Land"
+      },
+      {
+        "name": "Culture"
+      }
+    ],
+    "pdfs": [
+      {
+        "id": 1,
+        "name": "This is a pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      },
+      {
+        "id": 2,
+        "name": "This is another pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "Title": "Folk Performances in Bengal",
+    "lang": "Bengali",
+    "Featured": true,
+    "Description": "The folk theatre in Bengal evolved out the community spirit which has been existent in rural Bengal since before the sixteenth century. Genres such as the Panchali gaan (oral narrative or ballad songs) and the Kathakata (narrative) are considered predecessors of the present-day folk theatre in Bengal. Both the Panchali gaan and the Kathakata focus primarily on religious themes and mythological stories even though with the passage of time, other socially and culturally relevant themes and subjects have also come into focus. The primary aim of these folk forms apart from the entertainment and education of the masses was to simplify and subsequently instruct through religious texts.",
+    "Thumbnail": {
+      "url": "https://vvce.acm.org/ciil/agrikarp1/thumbnail8.jpg"
+    },
+    "Video": {
+      "name": "Agriculture in Karnataka Part-1",
+      "url": "https://vvce.acm.org/ciil/agrikarp1/agrikarp1/agrikarp1.m3u8"
+    },
+    "categories": [
+      {
+        "name": "Culture"
+      }
+    ],
+    "pdfs": [
+      {
+        "id": 1,
+        "name": "This is a pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      },
+      {
+        "id": 2,
+        "name": "This is another pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "Title": "The People of Bengal: From the Pre-Medieval Period to the Eighteenth Century",
+    "lang": "Bengali",
+    "Description": "The growth and history of Bengal and its people were intertwined not only with the history of the Indian subcontinent but also with the growth of present-day South Asia. Bengal was one of the earliest Aryan colonies in the Indian subcontinent and included modern-day West Bengal and Bangladesh as well as parts of Orissa, Bihar, Assam, and present-day Northeast. ‘Banga’ or Vanga was first mentioned in the Aitereya Aranyaka and frequent references of the land of ‘Vanga’ are found in both the Ramayana and the Mahabharata. People of ancient Bengal are said to have originally belonged to various tribal communities – North Indian Aryan Long Heads, South Indian Dravido-Munda Long Heads, Alpine Short Heads, and Mongolian Short Heads. These communities mingled with each other, and both the Bengali culture and the Bangla language was a result of this grand synthesis.",
+    "Thumbnail": {
+      "url": "https://vvce.acm.org/ciil/agrikarp1/thumbnail9.jpg"
+    },
+    "Video": {
+      "name": "Agriculture in Karnataka Part-1",
+      "url": "https://vvce.acm.org/ciil/agrikarp1/agrikarp1/agrikarp1.m3u8"
+    },
+    "categories": [
+      {
+        "name": "Language"
+      },
+      {
+        "name": "Culture"
+      }
+    ],
+    "pdfs": [
+      {
+        "id": 1,
+        "name": "This is a pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      },
+      {
+        "id": 2,
+        "name": "This is another pdf file.",
+        "url": "https://github.com/ArturT/Test-PDF-Files/raw/master/encrypted.pdf"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "Title": "Durga Puja",
+    "lang": "Bengali",
+    "Featured": true,
+    "Description": "The goddess is worshipped as a representative of shakti (power or energy) or adishakti (the primordial power or energy) in the Indian subcontinent and parts of South Asia. Shakti worship has taken the form of Durga Puja, a ten-day festival celebrated in sharad (autumn months of September and October) in the eastern parts of India, primarily West Bengal, Assam, Bihar, Odisha as well as in Bangladesh. In India, Durga Puja coincides with Navratri, primarily celebrated in the northern parts of the country. The final day of Durga Puja known as Dashami which marks the victory of good over evil happens on the same day as Dusshera (celebrated across India as the day Rama killed Ravana and is a marker of the fact that good will always destroy evil) or Dashain (celebrated in North Bengal and Nepal).",
+    "Thumbnail": {
+      "url": "https://vvce.acm.org/ciil/agrikarp1/thumbnail10.jpg"
+    },
+    "Video": {
+      "name": "Agriculture in Karnataka Part-1",
+      "url": "https://vvce.acm.org/ciil/agrikarp1/agrikarp1/agrikarp1.m3u8"
+    },
+    "categories": [
+      {
+        "name": "Culture"
       }
     ],
     "pdfs": [

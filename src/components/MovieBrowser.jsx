@@ -49,7 +49,7 @@ export default function MovieBrowser({ data, page = false }) {
                 dataLimit={5}
               />
             ) : (
-              movies.map((movie) => <MovieCard data={movie} />)
+              movies.filter((item, idx) => idx < 8).map((movie) => <MovieCard data={movie} />)
             )
           ) : (
             <Loader content="movies" color="dark" />
