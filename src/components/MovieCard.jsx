@@ -6,6 +6,7 @@ import AnimatedPlay from './AnimatedPlay';
 import { Col, Card, Button, Badge, Ratio } from 'react-bootstrap';
 
 export default function MovieCard({ data }) {
+  console.log(data);
   return data ? (
     <Col xl={3} lg={4} xs={6}>
       <div className="d-flex justify-content-around text-start">

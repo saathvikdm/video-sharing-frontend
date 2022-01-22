@@ -18,7 +18,7 @@ import { Col, Row, Badge, Ratio, Accordion, Modal, Button, Nav, Dropdown } from 
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import data from '../static-data.json';
+import data from '../static-video-data.json';
 import FileDownload from '../components/FileDownload';
 import ShowMore from '../components/ShowMore';
 
