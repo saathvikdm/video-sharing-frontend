@@ -60,7 +60,7 @@ export default function View(props) {
                   <p className="text-secondary mb-0 movie-card-text">
                     {/* 1hr 05mins <span className="text-dark">&bull;</span> */}
                     <span className="text-dark">&nbsp;{movie.lang}&nbsp;</span>
-                    <span className="text-dark">&bull;</span> Sept 10, 2021
+                    {/* <span className="text-dark">&bull;</span> Sept 10, 2021 */}
                   </p>
                 </div>
                 <div className="social-shares">
@@ -126,7 +126,7 @@ export default function View(props) {
                               movie.categories.map((category) => {
                                 return (
                                   <Badge pill bg="none" className="mx-1 bg-primary-blue ">
-                                    {category.name}
+                                    {category}
                                   </Badge>
                                 );
                               })}

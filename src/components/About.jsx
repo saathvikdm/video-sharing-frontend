@@ -1,8 +1,16 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+import { Button } from 'react-bootstrap';
+
+import { useLanguage } from '../context/languageContext';
+
+import data from '../static-about-data.json';
+
 export default function About({ readMore = false }) {
+  const language = useLanguage();
+  console.log(data);
+
   return (
     <section className="text-light" style={{ backgroundColor: '#000b36' }}>
       <div className="container py-5">

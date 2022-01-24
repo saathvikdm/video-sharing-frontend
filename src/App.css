@@ -238,6 +238,11 @@
   border-color: #011444 !important;
 }
 
+.outline-primary-blue:hover {
+  background-color: #001c63 !important;
+  border-color: #011444 !important;
+}
+
 #pagination-item {
   color: #001c64 !important;
 }

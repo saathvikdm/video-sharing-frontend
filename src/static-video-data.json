@@ -9,17 +9,9 @@
       "url": "https://vvce.acm.org/ciil/agrikarp1/thumbnail.jpg"
     },
     "Video": {
-      "name": "Agriculture in Karnataka Part-1",
       "url": "https://vvce.acm.org/ciil/agrikarp1/agrikarp1/agrikarp1.m3u8"
     },
-    "categories": [
-      {
-        "name": "Agriculture"
-      },
-      {
-        "name": "Culture"
-      }
-    ],
+    "categories": ["Agriculture", "Culture"],
     "pdfs": [
       {
         "id": 1,
@@ -42,17 +34,9 @@
       "url": "https://vvce.acm.org/ciil/agrikarp1/thumbnail2.jpg"
     },
     "Video": {
-      "name": "Agriculture in Karnataka Part-1",
       "url": "https://vvce.acm.org/ciil/agrikarp1/agrikarp1/agrikarp1.m3u8"
     },
-    "categories": [
-      {
-        "name": "Agriculture"
-      },
-      {
-        "name": "Culture"
-      }
-    ],
+    "categories": ["Agriculture", "Culture"],
     "pdfs": [
       {
         "id": 1,
@@ -70,17 +54,9 @@
       "url": "https://vvce.acm.org/ciil/agrikarp1/thumbnail3.jpg"
     },
     "Video": {
-      "name": "Agriculture in Karnataka Part-1",
       "url": "https://vvce.acm.org/ciil/agrikarp1/agrikarp1/agrikarp1.m3u8"
     },
-    "categories": [
-      {
-        "name": "Literature"
-      },
-      {
-        "name": "Culture"
-      }
-    ],
+    "categories": ["Literature", "Culture"],
     "pdfs": [
       {
         "id": 1,
@@ -104,17 +80,9 @@
       "url": "https://vvce.acm.org/ciil/agrikarp1/thumbnail4.jpg"
     },
     "Video": {
-      "name": "Agriculture in Karnataka Part-1",
       "url": "https://vvce.acm.org/ciil/agrikarp1/agrikarp1/agrikarp1.m3u8"
     },
-    "categories": [
-      {
-        "name": "Land"
-      },
-      {
-        "name": "Culture"
-      }
-    ],
+    "categories": ["Land", "Culture"],
     "pdfs": [
       {
         "id": 1,
@@ -137,17 +105,10 @@
       "url": "https://vvce.acm.org/ciil/agrikarp1/thumbnail5.jpg"
     },
     "Video": {
-      "name": "Agriculture in Karnataka Part-1",
       "url": "https://vvce.acm.org/ciil/agrikarp1/agrikarp1/agrikarp1.m3u8"
     },
-    "categories": [
-      {
-        "name": "Language"
-      },
-      {
-        "name": "Culture"
-      }
-    ],
+    "categories": ["Language", "Culture"],
+
     "pdfs": [
       {
         "id": 1,
@@ -170,17 +131,10 @@
       "url": "https://vvce.acm.org/ciil/agrikarp1/thumbnail6.jpg"
     },
     "Video": {
-      "name": "Agriculture in Karnataka Part-1",
       "url": "https://vvce.acm.org/ciil/agrikarp1/agrikarp1/agrikarp1.m3u8"
     },
-    "categories": [
-      {
-        "name": "Land"
-      },
-      {
-        "name": "Culture"
-      }
-    ],
+    "categories": ["Land", "Culture"],
+
     "pdfs": [
       {
         "id": 1,
@@ -203,17 +157,10 @@
       "url": "https://vvce.acm.org/ciil/agrikarp1/thumbnail7.jpg"
     },
     "Video": {
-      "name": "Agriculture in Karnataka Part-1",
       "url": "https://vvce.acm.org/ciil/agrikarp1/agrikarp1/agrikarp1.m3u8"
     },
-    "categories": [
-      {
-        "name": "Land"
-      },
-      {
-        "name": "Culture"
-      }
-    ],
+    "categories": ["Land", "Culture"],
+
     "pdfs": [
       {
         "id": 1,
@@ -237,14 +184,10 @@
       "url": "https://vvce.acm.org/ciil/agrikarp1/thumbnail8.jpg"
     },
     "Video": {
-      "name": "Agriculture in Karnataka Part-1",
       "url": "https://vvce.acm.org/ciil/agrikarp1/agrikarp1/agrikarp1.m3u8"
     },
-    "categories": [
-      {
-        "name": "Culture"
-      }
-    ],
+    "categories": ["Culture"],
+
     "pdfs": [
       {
         "id": 1,
@@ -267,17 +210,10 @@
       "url": "https://vvce.acm.org/ciil/agrikarp1/thumbnail9.jpg"
     },
     "Video": {
-      "name": "Agriculture in Karnataka Part-1",
       "url": "https://vvce.acm.org/ciil/agrikarp1/agrikarp1/agrikarp1.m3u8"
     },
-    "categories": [
-      {
-        "name": "Language"
-      },
-      {
-        "name": "Culture"
-      }
-    ],
+    "categories": ["Language", "Culture"],
+
     "pdfs": [
       {
         "id": 1,
@@ -301,14 +237,10 @@
       "url": "https://vvce.acm.org/ciil/agrikarp1/thumbnail10.jpg"
     },
     "Video": {
-      "name": "Agriculture in Karnataka Part-1",
       "url": "https://vvce.acm.org/ciil/agrikarp1/agrikarp1/agrikarp1.m3u8"
     },
-    "categories": [
-      {
-        "name": "Culture"
-      }
-    ],
+    "categories": ["Culture"],
+
     "pdfs": [
       {
         "id": 1,

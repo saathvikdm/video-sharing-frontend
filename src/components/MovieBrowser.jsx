@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Loader from './Loader';
 import MovieCard from './MovieCard';
 
-import { Button, InputGroup, FormControl } from 'react-bootstrap';
+import { Button, InputGroup, FormControl, Dropdown } from 'react-bootstrap';
 import { faPlay, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PaginationComponent from './Pagination';
@@ -38,6 +38,43 @@ export default function MovieBrowser({ data, page = false }) {
             )}
           </div>
         </div>
+
+        {page && (
+          <div className="d-flex justify-content-end">
+            <Dropdown className="mx-2">
+              <Dropdown.Toggle
+                variant="outline-secondary"
+                id="dropdown-basic"
+                className="outline-primary-blue"
+              >
+                Language&ensp;
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item>English</Dropdown.Item>
+                <Dropdown.Item>Hindi</Dropdown.Item>
+                <Dropdown.Item>Kannada</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+            <Dropdown className="mx-2">
+              <Dropdown.Toggle
+                variant="outline-secondary"
+                id="dropdown-basic"
+                className="outline-primary-blue"
+              >
+                Category&ensp;
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item>Agriculture</Dropdown.Item>
+                <Dropdown.Item>Culture</Dropdown.Item>
+                <Dropdown.Item>Language</Dropdown.Item>
+                <Dropdown.Item>Literature</Dropdown.Item>
+                <Dropdown.Item>Land</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
+        )}
 
         <div className="row justify-content-center justify-content-md-start align-items-start my-3 g-3">
           {movies && movies.length !== 0 ? (

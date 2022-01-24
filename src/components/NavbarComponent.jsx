@@ -1,23 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useLanguage, useLanguageUpdate } from '../context/languageContext';
 
-import {
-  Navbar,
-  NavDropdown,
-  Container,
-  Nav,
-  Form,
-  FormControl,
-  Button,
-  Dropdown,
-} from 'react-bootstrap';
+import { Navbar, NavDropdown, Container, Nav, Dropdown } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
-import Logo from '../logo.svg';
 import CiilLogo from '../ciil_logo.png';
 import GoiLogo from '../goi_logo.svg';
 import { Link } from 'react-router-dom';
 
 export default function NavbarComponent() {
+  const language = useLanguage();
+  const changeLanguage = useLanguageUpdate();
+
   return (
     <Navbar collapseOnSelect expand="lg" sticky="top" bg="light" variant="light">
       <Container>
@@ -69,13 +63,13 @@ export default function NavbarComponent() {
             <NavDropdown.Divider />
             <Dropdown className="mx-2">
               <Dropdown.Toggle variant="primary" id="dropdown-basic" className="bg-primary-blue">
-                Language: English
+                Language: {language}
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item href="#">English</Dropdown.Item>
-                <Dropdown.Item href="#">Hindi</Dropdown.Item>
-                <Dropdown.Item href="#">Kannada</Dropdown.Item>
+                <Dropdown.Item onClick={() => changeLanguage('en')}>English</Dropdown.Item>
+                <Dropdown.Item onClick={() => changeLanguage('hi')}>Hindi</Dropdown.Item>
+                <Dropdown.Item onClick={() => changeLanguage('ka')}>Kannada</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
             <NavDropdown.Divider />

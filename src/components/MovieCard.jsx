@@ -45,8 +45,8 @@ export default function MovieCard({ data }) {
             </Card.Title>
             <Card.Text>
               <p className="text-secondary mb-0 movie-card-text">
-                <span className="text-dark">{data.lang}&nbsp;</span>
-                <span className="text-dark">&bull;</span> Sept 10, 2021
+                <span className="text-muted">{data.lang}&nbsp;</span>
+                {/* <span className="text-dark">&bull;</span> Sept 10, 2021 */}
               </p>
             </Card.Text>
           </Card.Body>
